@@ -4,14 +4,22 @@ angular.module('app.routes', ['ionicUIRouter'])
 
   $stateProvider
 
-      .state('tabsController.questionRio', {
-    url: '/page2',
-    views: {
-      'tab1': {
-        templateUrl: 'templates/questionRio.html',
-        controller: 'questionRioCtrl'
-      }
-    }
+  .state('home', {
+    url: '/home',
+    templateUrl: 'templates/home.html',
+    controller: 'homeCtrl'
+  })
+
+  .state('profile', {
+    url: '/profile',
+    templateUrl: 'templates/profile.html',
+    controller: 'profileCtrl'
+  })
+
+  .state('quiz', {
+    url: '/quiz',
+    templateUrl: 'templates/quiz.html',
+    controller: 'quizCtrl'
   })
 
   .state('tabsController.classificaEs', {
@@ -38,27 +46,16 @@ angular.module('app.routes', ['ionicUIRouter'])
     }
   })
 
-  .state('tabsController', {
-    url: '/page1',
-    templateUrl: 'templates/tabsController.html',
-    abstract:true
+  .state('login', {
+    url: '/login',
+    templateUrl: 'templates/login.html',
+    controller: 'loginCtrl'
   })
 
-  .state('entrar', {
-    url: '/page5',
-    templateUrl: 'templates/entrar.html',
-    controller: 'entrarCtrl'
-  })
-
-  .state('introduO', {
-    url: '/',
-    templateUrl: 'templates/introduO.html'
-  })
-
-  .state('registro', {
+  .state('signup', {
     url: '/signup',
-    templateUrl: 'templates/registro.html',
-    controller: 'registroCtrl'
+    templateUrl: 'templates/signup.html',
+    controller: 'signupCtrl'
   })
   
   .state('tabsController.maisDados', {
@@ -80,20 +77,7 @@ angular.module('app.routes', ['ionicUIRouter'])
       }
     }
   })
-
-  /*
-    The IonicUIRouter.js UI-Router Modification is being used for this route.
-    To navigate to this route, do NOT use a URL. Instead use one of the following:
-      1) Using the ui-sref HTML attribute:
-        ui-sref='tabsController.classificaO'
-      2) Using $state.go programatically:
-        $state.go('tabsController.classificaO');
-    This allows your app to figure out which Tab to open this page in on the fly.
-    If you're setting a Tabs default page or modifying the .otherwise for your app and
-    must use a URL, use one of the following:
-      /page1/tab1/page10
-      /page1/tab2/page10
-  */
+  
   .state('tabsController.classificaO', {
     url: '/page10',
     views: {
@@ -114,14 +98,6 @@ angular.module('app.routes', ['ionicUIRouter'])
     controller: 'comoSaberCtrl'
   })
 
-  .state('galeria', {
-    url: '/page13',
-    templateUrl: 'templates/galeria.html',
-    controller: 'galeriaCtrl'
-  })
-
-$urlRouterProvider.otherwise('/')
-
-
+$urlRouterProvider.otherwise('/home')
 
 });
