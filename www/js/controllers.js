@@ -16,9 +16,12 @@ angular.module('app.controllers', [])
 
 .controller('signupCtrl', ['$scope', '$stateParams', function ($scope, $stateParams) {}])
 
-.controller('maisDadosCtrl', ['$scope', '$stateParams', function ($scope, $stateParams) {}])
+.controller('maisDadosCtrl', function ($scope, $stateParams) {
+})
 
-.controller('fotoCtrl', ['$scope', '$stateParams', function ($scope, $stateParams) {}])
+.controller('fotoCtrl', function ($scope, $stateParams) {
+
+})
 
 .controller('comoSaberCtrl', ['$scope', '$stateParams', function ($scope, $stateParams) {}])
 

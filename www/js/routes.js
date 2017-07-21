@@ -22,18 +22,10 @@ angular.module('app.routes', ['ionicUIRouter'])
     controller: 'quizCtrl'
   })
 
-  .state('tabsController.classificaEs', {
-    url: '/page3',
-    views: {
-      'tab1': {
-        templateUrl: 'templates/classificaEs.html',
-        controller: 'classificaEsCtrl'
-      },
-      'tab2': {
-        templateUrl: 'templates/classificaEs.html',
-        controller: 'classificaEsCtrl'
-      }
-    }
+  .state('classifications', {
+    url: '/classifications',
+    templateUrl: 'templates/classifications.html',
+    controller: 'classificaEsCtrl'    
   })
 
   .state('tabsController.cloudTabDefaultPage', {
@@ -57,39 +49,23 @@ angular.module('app.routes', ['ionicUIRouter'])
     templateUrl: 'templates/signup.html',
     controller: 'signupCtrl'
   })
-  
-  .state('tabsController.maisDados', {
-    url: '/page9',
-    views: {
-      'tab1': {
-        templateUrl: 'templates/maisDados.html',
-        controller: 'maisDadosCtrl'
-      }
-    }
+
+  .state('moreData', {
+    url: '/moreData',
+    templateUrl: 'templates/moreData.html',
+    controller: 'maisDadosCtrl'
   })
 
-  .state('tabsController.foto', {
-    url: '/page11',
-    views: {
-      'tab1': {
-        templateUrl: 'templates/foto.html',
-        controller: 'fotoCtrl'
-      }
-    }
+  .state('photo', {
+    url: '/photo',
+    templateUrl: 'templates/photo.html',
+    controller: 'fotoCtrl'
   })
-  
-  .state('tabsController.classificaO', {
-    url: '/page10',
-    views: {
-      'tab1': {
-        templateUrl: 'templates/classificaO.html',
-        controller: 'classificaOCtrl'
-      },
-      'tab2': {
-        templateUrl: 'templates/classificaO.html',
-        controller: 'classificaOCtrl'
-      }
-    }
+
+  .state('classification', {
+    url: '/classification',
+    templateUrl: 'templates/classification.html',
+    controller: 'classificaOCtrl'
   })
 
   .state('comoSaber', {
