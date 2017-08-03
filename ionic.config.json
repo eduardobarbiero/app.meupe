@@ -1,5 +1,8 @@
 {
   "name": "app-meupe",
   "app_id": "44431782",
-  "type": "ionic1"
+  "type": "ionic1",
+  "watchPatterns": [
+    "scss/**/*"
+  ]
 }
