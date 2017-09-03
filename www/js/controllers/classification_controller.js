@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('meu-pe')
-  .controller('classificationCtrl', function ($scope, $stateParams) {
+  .controller('ClassificationController', function ($scope, $stateParams) {
 
   })

@@ -1,6 +1,6 @@
 'use strict';
   
 angular.module('meu-pe')
-  .controller('homeCtrl', function ($scope, $stateParams) {
+  .controller('HomeController', function ($scope, $stateParams) {
   
   })

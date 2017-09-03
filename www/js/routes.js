@@ -4,61 +4,61 @@ angular.module('meu-pe')
     .config(function($stateProvider, $urlRouterProvider) {
     
       $stateProvider
-      .state('home', {
-        url: '/home',
+      .state('/', {
+        url: '/',
         templateUrl: 'templates/home.html',
-        controller: 'homeCtrl'
+        controller: 'HomeController'
       })
     
       .state('profile', {
         url: '/profile',
         templateUrl: 'templates/profile.html',
-        controller: 'profileCtrl'
+        controller: 'ProfileController'
       })
     
-      .state('quiz1', {
-        url: '/quiz1',
-        templateUrl: 'templates/quiz1.html',
-        controller: 'quiz1Ctrl'
+      .state('quiz', {
+        url: '/quiz',
+        templateUrl: 'templates/quiz.html',
+        controller: 'QuizController'
       })
     
-      .state('quiz2', {
-        url: '/quiz2',
-        templateUrl: 'templates/quiz2.html',
-        controller: 'quiz2Ctrl'
+      .state('sub-quiz', {
+        url: '/sub-quiz',
+        templateUrl: 'templates/subquiz.html',
+        controller: 'SubQuizController'
       })
     
       .state('classifications', {
         url: '/classifications',
         templateUrl: 'templates/classifications.html',
-        controller: 'classificationsCtrl'    
+        controller: 'ClassificationsController'    
       })
     
-      .state('login', {
-        url: '/login',
-        templateUrl: 'templates/login.html',
-        controller: 'loginCtrl'
+      .state('sigin', {
+        url: '/signin',
+        templateUrl: 'templates/signin.html',
+        controller: 'SignInController'
       })
     
       .state('signup', {
         url: '/signup',
         templateUrl: 'templates/signup.html',
-        controller: 'signupCtrl'
+        controller: 'SignUpController'
       })
     
       .state('photo', {
         url: '/photo',
         templateUrl: 'templates/photo.html',
-        controller: 'photoCtrl'
+        controller: 'PhotoController'
       })
     
       .state('classification', {
         url: '/classification',
         templateUrl: 'templates/classification.html',
-        controller: 'classificationCtrl'
+        controller: 'ClassificationController'
       })
     
-    $urlRouterProvider.otherwise('/home')
+    $urlRouterProvider.otherwise('/')
     
 });
     
