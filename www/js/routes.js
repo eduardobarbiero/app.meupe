@@ -34,7 +34,7 @@ angular.module('meu-pe')
         controller: 'ClassificationsController'    
       })
     
-      .state('sigin', {
+      .state('signin', {
         url: '/signin',
         templateUrl: 'templates/signin.html',
         controller: 'SignInController'
