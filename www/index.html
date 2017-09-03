@@ -6,14 +6,18 @@
 
     <title>Meu Pé</title>
 
-    <!-- Libs -->
-    <script src="lib/ionic/js/ionic.bundle.js"></script>
-
     <!-- Styles -->
-    <link href="css/ionic.app.css" rel="stylesheet">
-  
-    <!-- Angular -->
+    <link rel="stylesheet" href="css/ionic.app.css">
+    <link rel="stylesheet" href="lib/angular-ui-notification/dist/angular-ui-notification.min.css">
+
+    <!-- Ionic -->
     <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/ionic/js/ionic.bundle.js"></script>  
+    
+    <!-- Scripts --> 
+    <script type="text/javascript" src="lib/angular-ui-notification/dist/angular-ui-notification.min.js"></script>
+
+    <!-- Angular -->    
     <script type="text/javascript" src="js/module.js"></script>
     <script type="text/javascript" src="js/routes.js"></script>
     <script type="text/javascript" src="js/constants.js"></script>
@@ -42,7 +46,7 @@
     <script type="text/javascript" src="js/controllers/signup_controller.js"></script>
   </head>
   
-  <body animation="slide-left-right-ios7 platform-ios">
+  <body animation="slide-left-right-ios7">
     <div>
       <ion-side-menus enable-menu-with-back-views="false" data-componentid="side-menu21">
         <ion-side-menu-content>
