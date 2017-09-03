@@ -16,26 +16,22 @@ angular.module('app.routes', ['ionicUIRouter'])
     controller: 'profileCtrl'
   })
 
-  .state('quiz', {
-    url: '/quiz',
-    templateUrl: 'templates/quiz.html',
-    controller: 'quizCtrl'
+  .state('quiz1', {
+    url: '/quiz1',
+    templateUrl: 'templates/quiz1.html',
+    controller: 'quiz1Ctrl'
+  })
+
+  .state('quiz2', {
+    url: '/quiz2',
+    templateUrl: 'templates/quiz2.html',
+    controller: 'quiz2Ctrl'
   })
 
   .state('classifications', {
     url: '/classifications',
     templateUrl: 'templates/classifications.html',
-    controller: 'classificaEsCtrl'    
-  })
-
-  .state('tabsController.cloudTabDefaultPage', {
-    url: '/page4',
-    views: {
-      'tab3': {
-        templateUrl: 'templates/cloudTabDefaultPage.html',
-        controller: 'cloudTabDefaultPageCtrl'
-      }
-    }
+    controller: 'classificationsCtrl'    
   })
 
   .state('login', {
@@ -50,28 +46,16 @@ angular.module('app.routes', ['ionicUIRouter'])
     controller: 'signupCtrl'
   })
 
-  .state('moreData', {
-    url: '/moreData',
-    templateUrl: 'templates/moreData.html',
-    controller: 'maisDadosCtrl'
-  })
-
   .state('photo', {
     url: '/photo',
     templateUrl: 'templates/photo.html',
-    controller: 'fotoCtrl'
+    controller: 'photoCtrl'
   })
 
   .state('classification', {
     url: '/classification',
     templateUrl: 'templates/classification.html',
-    controller: 'classificaOCtrl'
-  })
-
-  .state('comoSaber', {
-    url: '/page12',
-    templateUrl: 'templates/comoSaber.html',
-    controller: 'comoSaberCtrl'
+    controller: 'classificationCtrl'
   })
 
 $urlRouterProvider.otherwise('/home')
