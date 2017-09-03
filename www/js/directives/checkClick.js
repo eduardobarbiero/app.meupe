@@ -1,7 +1,8 @@
-angular.module('app.directives', [])
+'use strict';
 
-.directive('checkClick', [function (){
-  return {
+angular.module('meu-pe.directives')
+  .directive('checkClick', function() {
+    return {
       restrict:'A',
       link: function (scope, elem, attr) {
         console.log(attr);
@@ -9,8 +10,5 @@ angular.module('app.directives', [])
           console.log(attr);
         });
       }
-   };
- }])
-.directive('blankDirective', [function(){
-
-}]);
+    };
+  })
