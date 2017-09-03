@@ -7,6 +7,7 @@ angular.module('meu-pe',
     'meu-pe.controllers',
     'meu-pe.directives',
     'meu-pe-components',
+    'ngCookies',
     'ui-notification',
   ])
 
