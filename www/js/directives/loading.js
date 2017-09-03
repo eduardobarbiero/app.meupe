@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('meu-pe.directives')
-  .directive('loading', function() {
+  .directive('loading', function () {
     return {
-        restrict: 'AE',
-        template: '<div class="loading" />'
-    };    
+      restrict: 'AE',
+      template: '<div class="loading" />'
+    };
   });

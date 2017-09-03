@@ -11,13 +11,13 @@ angular.module('meu-pe',
     'ui-notification',
   ])
 
-  .config(function($ionicConfigProvider, $sceDelegateProvider){
-    $sceDelegateProvider.resourceUrlWhitelist([ 'self','*://www.youtube.com/**', '*://player.vimeo.com/video/**']);
+  .config(function ($ionicConfigProvider, $sceDelegateProvider) {
+    $sceDelegateProvider.resourceUrlWhitelist(['self', '*://www.youtube.com/**', '*://player.vimeo.com/video/**']);
     $ionicConfigProvider.backButton.text('Voltar');
   })
-  
-  .run(function($ionicPlatform) {
-    $ionicPlatform.ready(function() {
+
+  .run(function ($ionicPlatform) {
+    $ionicPlatform.ready(function () {
       if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
         cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
         cordova.plugins.Keyboard.disableScroll(true);
@@ -25,6 +25,12 @@ angular.module('meu-pe',
       if (window.StatusBar) {
         StatusBar.styleDefault();
       }
+    });
+  })
+
+  .run(function($rootScope) {
+    $rootScope.$on('$stateChangeStart', function(evt, toState) {
+      $rootScope.isHideTab = toState.name === "signup" || toState.name !== "signin";
     });
   })
 

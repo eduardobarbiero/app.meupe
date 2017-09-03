@@ -2,7 +2,7 @@
 
 angular.module('meu-pe')
 .constant("AppConfig", {
-    "api_url": "https://prison-go.herokuapp.com/"    
+    "api_url": "<API_URL>"    
 })
 
 .constant("ERRORS", {

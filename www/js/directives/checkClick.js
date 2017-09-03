@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('meu-pe.directives')
-  .directive('checkClick', function() {
+  .directive('checkClick', function () {
     return {
-      restrict:'A',
+      restrict: 'A',
       link: function (scope, elem, attr) {
         console.log(attr);
         elem.bind('click', function () {
