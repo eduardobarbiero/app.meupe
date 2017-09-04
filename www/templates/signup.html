@@ -1,63 +1,65 @@
 <ion-view title="Registro" hide-back-button="false">
   <ion-content padding="false" class="has-header">
-    <div class="list">
-      <div class="item item-divider">
-        Informações de Acesso
-      </div>
-      <label class="item item-input">
-        <span class="input-label">Nome</span>
-        <input type="text">
-      </label>
-      <label class="item item-input">
-        <span class="input-label">E-mail</span>
-        <input type="email">
-      </label>
-      <label class="item item-input">
-        <span class="input-label">Senha</span>
-        <input type="password">
-      </label>
-      <div class="spacer" style="height: 40px;"></div>
-      <div class="item item-divider">
-        Informações Pessoais
-      </div>
-      <label class="item item-input">
-        <span class="input-label">Data Nascimento</span>
-        <input type="text">
-      </label>
-      <label class="item item-input item-select">
-        <div class="input-label">
-          Estado
+    <form name="signup_form" ng-submit="create(user)">
+      <div class="list">
+        <div class="item item-divider">
+          Informações de Acesso
         </div>
-        <select>
-          <option selected>Santa Catarina</option>
-          <option>São Paulo</option>
-          <option>Rio de Janeiro</option>
-        </select>
-      </label>
-      <label class="item item-input item-select">
-        <div class="input-label">
-          Cidade
-        </div>
-        <select>
-          <option selected>Joinville</option>
-          <option>Jaraguá do Sul</option>
-          <option>Guaramirim</option>
-        </select>
-      </label>
-      <div class="item item-input item-toggle">
-        <span class="input-label">Profissional da Saúde?</span>
-        <label class="toggle toggle-balanced">
-          <input type="checkbox">
-          <div class="track">
-            <div class="handle"></div>
-          </div>
+        <label class="item item-input">
+          <span class="input-label">Nome</span>
+          <input type="text" ng-model="user.name" />
         </label>
-      </div>
-      <div class="row">
-        <div class="col">
-          <a ui-sref="quiz" class="button button-balanced  button-block">Registrar</a>
+        <label class="item item-input">
+          <span class="input-label">E-mail</span>
+          <input type="email" ng-model="user.email" />
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Senha</span>
+          <input type="password" ng-model="user.password" />
+        </label>
+        <div class="spacer" style="height: 40px;"></div>
+        <div class="item item-divider">
+          Informações Pessoais
+        </div>
+        <label class="item item-input">
+          <span class="input-label">Data Nascimento</span>
+          <input type="date" ng-model="user.birthday" />
+        </label>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Estado
+          </div>
+          <select ng-model="user.state">
+            <option selected>Santa Catarina</option>
+            <option>São Paulo</option>
+            <option>Rio de Janeiro</option>
+          </select>
+        </label>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Cidade
+          </div>
+          <select ng-model="user.city">
+            <option selected>Joinville</option>
+            <option>Jaraguá do Sul</option>
+            <option>Guaramirim</option>
+          </select>
+        </label>
+        <div class="item item-input item-toggle">
+          <span class="input-label">Profissional da Saúde?</span>
+          <label class="toggle toggle-balanced">
+            <input type="checkbox" ng-model="user.is_professional" />
+            <div class="track">
+              <div class="handle"></div>
+            </div>
+          </label>
+        </div>
+        <div class="row">
+          <div class="col">
+            <input class="button button-balanced button-block" type="submit" value="Registrar" />
+          </div>
         </div>
       </div>
-    </div>
+    </form>
   </ion-content>
 </ion-view>

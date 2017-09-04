@@ -58,36 +58,35 @@ angular.module('meu-pe-components')
       }
 
       function callback_verify(error) {
-        console.log(error);
         if (error.status == 401) {
           $location.path("/login");
         }
 
         if (error.status == 499) {
           if (error.data.errors.length)
-            Notification.error({ message: generate_message(ERRORS[6].descricao, error.data.errors), delay: 1000, replaceMessage: true });
+            Notification.error({ message: generate_message(ERRORS[6].descricao, error.data.errors)});
         } else {
           for (var i = 0; i < Object.keys(ERRORS).length; i++) {
             if (ERRORS[i].codigo == error.status) {
-              Notification.error({ message: generate_message(ERRORS[i].descricao, ERRORS[i].causasProvaveis), delay: 1000, replaceMessage: true });
+              Notification.error({ message: generate_message(ERRORS[i].descricao, ERRORS[i].causasProvaveis)});
               return;
             }
           }
-          Notification.error({ message: generate_message(ERRORS.default.descricao, ERRORS.default.causasProvaveis), delay: 1000, replaceMessage: true });
+          Notification.error({ message: generate_message(ERRORS.default.descricao, ERRORS.default.causasProvaveis)});
         }
       }
 
       function generate_message(title, content) {
-        var html = '<h5 style="color: #FFF">' + title + '</h5>';
+        var html = '<h5 style="color: #FFF; font-weight: bold;">' + title + '</h5>';
         html += '<div class="message" ng-bind-html="message"></div>';
         html += '<div class="message">';
         html += '    <ul>';
         if (content.length > 1) {
           angular.forEach(content, function (value) {
-            html += '<li>' + value + '</li>';
+            html += '<li style="color: #FFF">' + value + '</li>';
           });
         } else {
-          html += '<li>' + content + '</li>';
+          html += '<li style="color: #FFF">' + content + '</li>';
         }
         html += '    </ul>';
         html += '</div>';

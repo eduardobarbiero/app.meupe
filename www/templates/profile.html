@@ -1,11 +1,41 @@
-<ion-view view-title="Perfil">
+<ion-view view-title="Perfil" hide-back-button="true">
   <ion-nav-buttons side="right">
-    <a ui-sref="settings" class="tab-item">
+    <a ui-sref="setting" class="tab-item">
           <i class="icon ion-ios-gear"></i>
         </a>
     </button>
   </ion-nav-buttons>
   <ion-content>
-    <h1>Perfil</h1>
+    <div class="list card">
+      <div class="item item-body" style="text-align: center">
+        <img src="http://i.imgur.com/MrHjS44.jpg" width="150" height="150" style="border-radius: 50%">
+        <div style="margin-top: 10px">
+          João Antônio
+          <p>Usuário desde: nov/2016.</p>
+        </div>
+        <div class="spacer" style="height: 20px;"></div>
+        <div class="list" style="text-align: left">
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Nome</span>
+            <p>João Antônio</p>
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">E-mail</span>
+            <p>joao.antonio@gmail.com</p>
+          </label>
+          <label class="item item-input item-stacked-label">
+            <span class="input-label">Data Nascimento</span>
+            <p>10/11/1994</p>
+          </label>
+          <ion-toggle toggle-class="toggle-balanced">Profissional da saúde?</ion-toggle>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="text-align: center">
+      <div class="col">
+        <input class="button button-balanced" type="button" value="Editar Perfil" />
+      </div>
+    </div>
+    <div class="spacer" style="height: 40px;"></div>
   </ion-content>
 </ion-view>

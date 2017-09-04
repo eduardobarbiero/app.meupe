@@ -33,8 +33,8 @@
   <script type="text/javascript" src="js/directives/disableMenuDrag.js"></script>
 
   <!-- Services -->
-  <script type="text/javascript" src="js/services/auth.js"></script>
   <script type="text/javascript" src="js/services/signin.js"></script>
+  <script type="text/javascript" src="js/services/signup.js"></script>
 
   <!-- Controllers -->
   <script type="text/javascript" src="js/controllers/classification_controller.js"></script>
@@ -45,9 +45,10 @@
   <script type="text/javascript" src="js/controllers/photo_controller.js"></script>
   <script type="text/javascript" src="js/controllers/profile_controller.js"></script>
   <script type="text/javascript" src="js/controllers/quiz_controller.js"></script>
-  <script type="text/javascript" src="js/controllers/subquiz_controller.js"></script>
+  <script type="text/javascript" src="js/controllers/setting_controller.js"></script>
   <script type="text/javascript" src="js/controllers/signin_controller.js"></script>
   <script type="text/javascript" src="js/controllers/signup_controller.js"></script>
+  <script type="text/javascript" src="js/controllers/subquiz_controller.js"></script>
 </head>
 
 <body ng-controller="MasterController" animation="slide-left-right-ios7">
@@ -59,7 +60,7 @@
           <ion-nav-buttons side="left">
           </ion-nav-buttons>
         </ion-nav-bar>
-        <ion-tabs ng-show="isHideTab" class="tabs tabs-icon-only">
+        <ion-tabs ng-hide="isHideTab" class="tabs tabs-icon-only">
           <ion-tab href="/#" icon-on="ion-ios-home" icon-off="ion-ios-home-outline"></ion-tab>
           <ion-tab href="quiz" icon-on="ion-ios-plus" icon-off="ion-ios-plus-outline"></ion-tab>
           <ion-tab href="profile" icon-on="ion-ios-person" icon-off="ion-ios-person-outline"></ion-tab>

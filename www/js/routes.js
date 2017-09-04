@@ -16,6 +16,12 @@ angular.module('meu-pe')
         controller: 'ProfileController'
       })
 
+      .state('setting', {
+        url: '/setting',
+        templateUrl: 'templates/setting.html',
+        controller: 'SettingController'
+      })
+
       .state('quiz', {
         url: '/quiz',
         templateUrl: 'templates/quiz.html',

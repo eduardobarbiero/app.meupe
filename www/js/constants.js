@@ -23,36 +23,36 @@ angular.module('meu-pe')
   },
   2: {
     codigo: 400,
-    descricao: "Requisição inválida",
-    causasProvaveis: ["O servidor não pôde compreender a solicitação e processá-la devido à sintaxe incorreta"]
+    descricao: "Requisição inválida.",
+    causasProvaveis: ["O servidor não pôde compreender a solicitação e processá-la devido à sintaxe incorreta."]
   },
   3: {
     codigo: 401,
-    descricao: "Não autorizado",
-    causasProvaveis: ["Acesso negado devido a credenciais inválidas", "Você está logado, porém seu perfil de usuário não tem permissão de acesso a essas informações"]
+    descricao: "Não autorizado.",
+    causasProvaveis: ["Acesso negado devido a credenciais inválidas", "Você está logado, porém seu perfil de usuário não tem permissão de acesso a essas informações."]
   },
   4: {
     codigo: 403,
-    descricao: "Acesso negado",
-    causasProvaveis: ["Você pode estar acessando uma URL inválida", "Você não tem permissão para acessar esta página"]
+    descricao: "Acesso negado.",
+    causasProvaveis: ["Você pode estar acessando uma URL inválida", "Você não tem permissão para acessar esta página."]
   },
   5: {
     codigo: 404,
-    descricao: "Página não encontrada",
-    causasProvaveis: ["Você pode estar acessando uma URL inválida"]
+    descricao: "Página não encontrada.",
+    causasProvaveis: ["Você pode estar acessando uma URL inválida."]
   },
   6: {
     codigo: 499,
-    descricao: "Dados inválidos"
+    descricao: "Dados inválidos."
   },
   7: {
     codigo: 500,
-    descricao: "Erro interno de servidor",
-    causasProvaveis: ["O servidor encoutrou um erro inesperado que impediu de realizar sua solicitação"]
+    descricao: "Erro interno de servidor.",
+    causasProvaveis: ["O servidor encoutrou um erro inesperado que impediu de realizar sua solicitação."]
   },
   8: {
     codigo: 999,
-    descricao: "Erro ao processar sua solicitação",
-    causasProvaveis: ["O seu navegador não tem suporte a todas as tecnologias exigidas pelo sistema"]
+    descricao: "Erro ao processar sua solicitação.",
+    causasProvaveis: ["O seu navegador não tem suporte a todas as tecnologias exigidas pelo sistema."]
   }
 })
